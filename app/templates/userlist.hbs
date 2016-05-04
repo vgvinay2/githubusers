@@ -1,9 +1,10 @@
 <div class="container-fluid">
-
-User: {{input type="text" value=filter }} 
-<button {{action 'search'}}>Search</button>
-
 	<div class="col-md-5">
+
+	<br>  
+{{input value=fileter }}
+<button type="button" {{action "search" fileter }}>Search</button>
+
 			{{#each model as |user|}}
 				<div class="users">
 					<img src="{{user.avatar_url}}" height="50px" width="50px" class="pull-left"/>

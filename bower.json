@@ -6,7 +6,8 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap": "~3.3.5",
-    "sifter": "~0.4.3"
+    "sifter": "~0.4.3",
+    "ember-data": "^2.5.2"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6"
