@@ -1,25 +1,24 @@
 <div class="container-fluid">
-	<div class="col-md-5">
+    <div class="col-md-5">
+        <br>
+        {{input value=fileter }}
+        <button type="button" {{action "search" fileter }}>Search</button>
 
-	<br>  
-{{input value=fileter }}
-<button type="button" {{action "search" fileter }}>Search</button>
-
-			{{#each model as |user|}}
-				<div class="users">
-					<img src="{{user.avatar_url}}" height="50px" width="50px" class="pull-left"/>
-					<ul class="listuser pull-left">
-						<li> 
-						  {{#link-to "userlist.user" user.login }}
-						 		User URL: {{user.url}}
-						  {{/link-to}}
-						</li>
-						<li>User Name:{{user.login}}</li>
-					</ul>
-				</div>
-			{{/each}}
-	</div>
-	<div class="col-md-6">
-		{{outlet}}
-	</div>
+        {{#each model as |user|}}
+            <div class="users">
+                <img src="{{user.avatar_url}}" height="50px" width="50px" class="pull-left"/>
+                <ul class="listuser pull-left">
+                    <li>
+                        {{#link-to "userlist.user" user.login }}
+                            User URL: {{user.url}}
+                        {{/link-to}}
+                    </li>
+                    <li>User Name:{{user.login}}</li>
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+    <div class="col-md-6">
+        {{outlet}}
+    </div>
 </div>
